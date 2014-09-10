@@ -1,4 +1,38 @@
+@border-radius: 8px;
+@rgba: rgba(225,225,225,0.7);
+
 body{
   background-color: #ffdc00;
 }
 
+.weapon, .pet {
+  display: inline-block;
+  width: 20%;
+  height: 222px;
+  border: 3px solid gray;
+  border-radius: @border-radius;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .name {
+    background-color: @rgba;
+    border-radius: 0px 0px 5px 0px;
+    padding: 3px;
+  }
+
+  .damage {
+    .name;
+    border-radius: 5px 0px 0px 0px;
+    position: relative;
+    top: 164px;
+  }
+}
+
+#cage {
+  background-color: @rgba;
+
+  .pet {
+    .pet;  
+    margin: 10px;
+  }
+}
